@@ -28,7 +28,7 @@ def main():
         endpoint.Payment.create(amount=Amount('0.01', 'EUR'),
                                 counterparty_alias=Pointer('IBAN', '', ''),
                                 description=str(round(i / end * 100, 2)) + " Prozent von deinem Geld",
-                                monetary_account_id=1156093)
+                                monetary_account_id=)
         time.sleep(0.33333)
 
 
