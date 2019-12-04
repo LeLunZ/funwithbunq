@@ -23,12 +23,12 @@ def main():
 
     api_context = ApiContext(ApiEnvironmentType.PRODUCTION, all_option.api_key, '*')
     BunqContext.load_api_context(api_context)
-    end = 200
+    end = 50
     for i in range(0, end):
         endpoint.Payment.create(amount=Amount('0.01', 'EUR'),
                                 counterparty_alias=Pointer('IBAN', '', ''),
                                 description=str(round(i / end * 100, 2)) + " Prozent von deinem Geld",
-                                monetary_account_id=)
+                                monetary_account_id=1156093)
         time.sleep(0.33333)
 
 
